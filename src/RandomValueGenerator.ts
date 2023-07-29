@@ -5,7 +5,7 @@ export type Options = {
 	amount: number;
 };
 
-export class RandomValueGenerator<Values> {
+export class randomObjectGenerator<Values> {
 	constructor(public options: Values & Options) {}
 
 	perform() {

@@ -6,17 +6,17 @@ export type Options = {
 };
 
 export class RandomObjectGenerator<Values> {
-	constructor(public options: Values & Options) {}
+	constructor(public objValues: Values & Options) {}
 
 	perform() {
-		const values: { [key: string]: any } = Object.entries(this.options).reduce(
+		const values: { [key: string]: any } = Object.entries(this.objValues).reduce(
 			(acc, [key, value]) => {
 				if (key === 'amount' || key === 'hasId') return acc;
 				return { ...acc, [key]: value };
 			},
 			{},
 		);
-		const { hasId, amount } = this.options;
+		const { hasId, amount } = this.objValues;
 		const arrayValues: any[] = [];
 		for (let i = 0; i < amount; i++) {
 			const objectEntries = Object.entries(values);
@@ -41,9 +41,9 @@ export class RandomObjectGenerator<Values> {
 	}
 }
 
-export function randomValueGenerator<Values>(options: Values & Options) {
-	const randomValueGenerator = new RandomValueGenerator<Values>(options);
-	return randomValueGenerator.perform();
+export function randomObjectGenerator<Values>(objValues: Values & Options) {
+	const randomObjectGenerator = new RandomObjectGenerator<Values>(objValues);
+	return randomObjectGenerator.perform();
 }
 
 // usage example

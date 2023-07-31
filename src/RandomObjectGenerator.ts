@@ -1,9 +1,5 @@
 import { randomUUID } from 'crypto';
-
-export type Options = {
-	hasId?: boolean;
-	amount: number;
-};
+import { Options } from '..';
 
 export class RandomObjectGenerator<Values> {
 	constructor(public objValues: Values & Options) {}
@@ -39,11 +35,6 @@ export class RandomObjectGenerator<Values> {
 		}
 		return arrayValues as Values[];
 	}
-}
-
-export function randomObjectGenerator<Values>(objValues: Values & Options) {
-	const randomObjectGenerator = new RandomObjectGenerator<Values>(objValues);
-	return randomObjectGenerator.perform();
 }
 
 // usage example

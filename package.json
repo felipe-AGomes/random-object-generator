@@ -1,7 +1,8 @@
 {
 	"name": "random-obj-generator",
 	"description": "Código útil para a geração de dados aleatórios",
-	"version": "1.0.0",
+	"version": "3.0.0",
+	"type": "module",
 	"main": "jest.config.js",
 	"devDependencies": {
 		"@types/jest": "^29.5.3",

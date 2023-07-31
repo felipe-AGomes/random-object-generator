@@ -1,4 +1,4 @@
-import { RandomValueGenerator } from './RandomValueGenerator';
+import { RandomObjectGenerator } from './RandomObjectGenerator';
 
 export const options = {
 	name: ['felipe', 'ketlin', 'jair', 'lulinha', 'ednara'],
@@ -9,9 +9,9 @@ export const options = {
 	amount: 2,
 };
 
-describe('RandomValueGenerator', () => {
+describe('RandomObjectGenerator', () => {
 	it('should create an array of objects with the property passed as a parameter', () => {
-		const sut = new RandomValueGenerator(options);
+		const sut = new RandomObjectGenerator(options);
 
 		const result = sut.perform();
 
@@ -22,7 +22,7 @@ describe('RandomValueGenerator', () => {
 	});
 
 	it('should create an array with the length the same of amout', () => {
-		const sut = new RandomValueGenerator(options);
+		const sut = new RandomObjectGenerator(options);
 
 		const result = sut.perform();
 
@@ -30,7 +30,7 @@ describe('RandomValueGenerator', () => {
 	});
 
 	it('should insert into objects the property "id" if hasId be true', () => {
-		const sut = new RandomValueGenerator(options);
+		const sut = new RandomObjectGenerator(options);
 
 		const result = sut.perform();
 
@@ -39,7 +39,7 @@ describe('RandomValueGenerator', () => {
 
 	it('should not insert into objects the property "id" if hasId be false', () => {
 		const newOptions = { ...options, hasId: false };
-		const sut = new RandomValueGenerator(newOptions);
+		const sut = new RandomObjectGenerator(newOptions);
 
 		const result = sut.perform();
 

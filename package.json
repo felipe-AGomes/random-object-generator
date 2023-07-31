@@ -1,6 +1,6 @@
 {
-	"name": "random-value-generator",
-	"description": "",
+	"name": "random-obj-generator",
+	"description": "Código útil para a geração de dados aleatórios",
 	"version": "1.0.0",
 	"main": "jest.config.js",
 	"devDependencies": {
@@ -16,7 +16,11 @@
 		"type": "git",
 		"url": "git+https://github.com/felipe-AGomes/random-value-generator.git"
 	},
-	"keywords": [],
+	"keywords": [
+		"random",
+		"Object",
+		"Generator"
+	],
 	"author": "",
 	"license": "ISC",
 	"bugs": {

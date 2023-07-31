@@ -48,7 +48,7 @@ export function randomObjectGenerator<Values>(objValues: Values & Options) {
 
 // usage example
 
-/* const result = randomValueGenerator({
+/* const result = RandomObjectGenerator({
 	name: ['jon'],
 	lastName: ['doe'],
 	nascimento: ['1999-11-13', '1994-07-30'],
